@@ -13,6 +13,14 @@ node {
           echo 'Stage 2'
       }
 
+      stage('new pipeline') {
+         steps {
+            build job: 'notMyPipeline', propagate: true, wait: true, parameters: [
+               string(name: 'param1', value: "value1")
+            ]
+         }
+      }
+
       stage('Publish build info') {
           echo 'Done'
       }
