@@ -12,6 +12,10 @@ node {
       stage('Stage2') {
           echo 'Stage 2'
       }
+      
+      stage('Stage3') {
+          echo 'Stage 3'
+      }
 
       stage('new pipeline') {
          steps {
