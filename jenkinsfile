@@ -1,0 +1,30 @@
+node {
+   echo 'Hello World'
+   
+    stage('Clone sources') {
+        git url: 'https://github.com/PeterPiPer/Faffing.git/'
+    }
+    stages {
+      stage('Stage1') {
+          echo 'Stage 1'
+      }
+
+      stage('Stage2') {
+          echo 'Stage 2'
+      }
+
+      stage('Publish build info') {
+          echo 'Done'
+      }
+    }
+}
+
+/*
+node('test') {
+   echo 'Helo Test...'
+   
+   stage('First test stage') {
+      echo 'Test Stage 1'
+   }
+}
+*/
